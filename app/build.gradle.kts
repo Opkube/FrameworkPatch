@@ -29,8 +29,12 @@ android {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
     }
+
+    packaging {
+        resources.excludes.add("META-INF/versions/9/OSGI-INF/MANIFEST.MF")
+    }
 }
 
 dependencies {
-    implementation("com.madgag.spongycastle:bcpkix-jdk15on:1.58.0.0")
+    implementation("org.bouncycastle:bcpkix-jdk18on:1.78.1")
 }
